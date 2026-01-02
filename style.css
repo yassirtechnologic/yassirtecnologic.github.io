@@ -124,14 +124,22 @@ body {
   overflow: hidden;
 }
 
+/* overlay visual SIN bloquear clicks */
 .project-card::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 14px;
-  background: linear-gradient(120deg, transparent, rgba(88,166,255,0.12), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(88, 166, 255, 0.12),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .project-card:hover::before {
@@ -141,6 +149,15 @@ body {
 .project-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* contenido por encima del overlay */
+.project-card h3,
+.project-card p,
+.project-card .tech,
+.project-links {
+  position: relative;
+  z-index: 2;
 }
 
 .project-card h3 {
@@ -162,6 +179,9 @@ body {
   margin-bottom: 15px;
 }
 
+/* =========================
+   LINKS DE PROYECTOS (FIX)
+========================= */
 .project-links {
   display: flex;
   gap: 15px;
@@ -172,6 +192,9 @@ body {
   color: #58a6ff;
   font-weight: bold;
   transition: color 0.3s ease;
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
 }
 
 .project-links a:hover {
@@ -295,4 +318,5 @@ body {
     transform: translateY(0);
   }
 }
+
 
