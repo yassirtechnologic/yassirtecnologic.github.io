@@ -13,6 +13,10 @@ Interested in **junior / junior+ opportunities** and freelance projects.
 - 🌐 **Eventos York & Katy Website** – Responsive website for real business
 - 🧠 **Python Data Analysis Portfolio**
 - 🏗️ **Web Mantenimiento Balladares**
+- 📊 **Credit Risk Scoring API** – API de scoring crediticio con FastAPI y Machine Learning  
+  👉 Demo: https://credit-risk-scoring-api.onrender.com/docs  
+  👉 AWS (bajo cita): entorno productivo en EC2
+
 
 ## 🔹 Technologies
 - **Backend:** Python, Node.js, Express, REST APIs
